@@ -3,29 +3,29 @@ import { IQuestion } from "../utils/types/quiz.type";
 export const initialQuoestions: IQuestion[] = [
   {
     id: 1,
-    question: "1. Apa kepanjangan HTML",
+    question: "Apa kepanjangan HTML",
     options: [
       {
-        label: "Hyper mackup language",
+        label: "Hyper Text Markup Language",
         isCorrect: true,
       },
       {
-        label: "Hyper salah",
+        label: "Hyper Text Multiple Language",
         isCorrect: false,
       },
       {
-        label: "Hyper apa aja",
+        label: "Hyper Tool Multi Language",
         isCorrect: false,
       },
       {
-        label: "Hyper hehe",
+        label: "Hyper Text Markup Level",
         isCorrect: false,
       },
     ],
   },
   {
     id: 2,
-    question: "2. Apa fungsi utama tag <p> dalam HTML?",
+    question: "Apa fungsi utama tag <p> dalam HTML?",
     options: [
       {
         label: "Paragraph",
@@ -48,7 +48,7 @@ export const initialQuoestions: IQuestion[] = [
 
   {
     id: 3,
-    question: "3. Apa singkatan dari CSS?",
+    question: "Apa singkatan dari CSS?",
     options: [
       {
         label: "Computer Style Sheet",
@@ -71,7 +71,7 @@ export const initialQuoestions: IQuestion[] = [
 
   {
     id: 4,
-    question: "4. Apa peran JavaScript dalam pengembangan web?",
+    question: "Apa peran JavaScript dalam pengembangan web?",
     options: [
       {
         label: "Menyusun layout halaman",

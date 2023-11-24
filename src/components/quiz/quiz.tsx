@@ -16,7 +16,7 @@ const Quiz = () => {
   const [selectedOption, setSelectedOption] = useState<IOption | null>(null);
   const [score, setScore] = useState(0);
   const [timer, setTimer] = useState(20);
-  const [anwered, setAswered] = useState<number[]>([]);
+  const [answered, setAnswered] = useState<number[]>([]);
 
   const isQuizFinished = currentQuestion === questions.length;
   const isNextButtonDisabled = selectedOption === null;
@@ -43,20 +43,20 @@ const Quiz = () => {
   }, []);
 
   const handleOptionClick = (option: IOption) => {
-    if (!anwered.includes(currentQuestion)) {
+    if (!answered.includes(currentQuestion)) {
       setSelectedOption(option);
     }
   };
 
   const checkAnswer = () => {
-    if (!anwered.includes(currentQuestion)) {
+    if (!answered.includes(currentQuestion)) {
       if (selectedOption) {
         const isCorrect = selectedOption.isCorrect;
         setScore((prev) => (isCorrect ? prev + 20 : prev - 20));
       } else {
         setScore((prev) => prev - 20);
       }
-      setAswered((prev) => [...prev, currentQuestion]);
+      setAnswered((prev) => [...prev, currentQuestion]);
     }
   };
 
@@ -81,7 +81,7 @@ const Quiz = () => {
           <Timer timer={timer} />
           <Progress timer={timer} />
           <QuestionMenu
-            anwered={anwered}
+            answered={answered}
             questions={questions}
             currentQuestion={currentQuestion}
             handleOptionClick={handleOptionClick}

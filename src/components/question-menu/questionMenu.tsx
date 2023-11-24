@@ -8,7 +8,7 @@ interface Props {
   currentQuestion: number;
   handleOptionClick: (option: IOption) => void;
   selectedOption: IOption | null;
-  anwered: number[];
+  answered: number[];
 }
 
 const QuestionMenu = ({
@@ -16,12 +16,12 @@ const QuestionMenu = ({
   currentQuestion,
   handleOptionClick,
   selectedOption,
-  anwered,
+  answered,
 }: Props) => {
   return (
     <div className="space-y-4">
-      <h1 className="text-2xl font-semibold">
-        {questions[currentQuestion]?.question}
+      <h1 className="text-xl md:text-2xl font-semibold">
+        {currentQuestion} {questions[currentQuestion]?.question}
       </h1>
       <ul className="flex flex-col gap-4">
         {questions[currentQuestion]?.options?.map((option) => (
@@ -29,7 +29,7 @@ const QuestionMenu = ({
             key={option.label}
             onClick={() => handleOptionClick(option)}
             disabled={
-              selectedOption !== null || anwered.includes(currentQuestion)
+              selectedOption !== null || answered.includes(currentQuestion)
             }
             className={`${getOptionColor(option, selectedOption)}
           rounded-md px-4 py-2 text-start border border-blue-300 font-medium`}
