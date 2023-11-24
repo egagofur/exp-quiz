@@ -21,7 +21,7 @@ const QuestionMenu = ({
   return (
     <div className="space-y-4">
       <h1 className="text-xl md:text-2xl font-semibold">
-        {currentQuestion} {questions[currentQuestion]?.question}
+        {currentQuestion + 1} {questions[currentQuestion]?.question}
       </h1>
       <ul className="flex flex-col gap-4">
         {questions[currentQuestion]?.options?.map((option) => (

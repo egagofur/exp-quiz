@@ -94,7 +94,7 @@ export const initialQuoestions: IQuestion[] = [
 
   {
     id: 5,
-    question: "5. Apa yang dimaksud dengan HTTP?",
+    question: "Apa yang dimaksud dengan HTTP?",
     options: [
       {
         label: "HyperText Transfer Protocol",
